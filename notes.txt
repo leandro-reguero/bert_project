@@ -1,0 +1,11 @@
+1. reducir y balancear dataset por publis y longitud
+2. introduce each sentence /paragraph into BERT, then a 768-dimensional vector representation is extracted
+2.5 these vectors come from architecture of BERT --> 6 layers ("learning component/pattern") and
+786d hidden state ("information carried and refinement through the layers")
+2.5 --> design comes from Attention is All You Need
+3. measuring similarity in vectors with cosine distance, to classify/cluster in 5 categories (ideological buckets)  
+3.5 --> which is K-Means clustering
+4. after clustering, labels are assigned based on publications present in each cluster (and its biases)
+5. finetuning BERT --> MLM (mask = 15%) and NSP (article sentence order)
+5.5 convert each sentence into 768d representation
+6. cluster into 5 groups
